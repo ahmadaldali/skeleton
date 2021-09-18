@@ -1,5 +1,12 @@
 security:
     providers:
+       my_ldap:
+            ldap:
+            service: Symfony\Component\Ldap\Ldap
+            base_dn: dc=ec2-35-157-100-119,dc=eu-central-1,dc=compute,dc=amazonaws,dc=com
+            search_dn: cn=Administrator,cn=Users,dc=ec2-35-157-100-119,dc=eu-central-1,dc=compute,dc=amazonaws,dc=com
+            search_password: 1234aaAA
+            default_roles: Administrator
         pimcore_admin:
             id: Pimcore\Bundle\AdminBundle\Security\User\UserProvider
 
